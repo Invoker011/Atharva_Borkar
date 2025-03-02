@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Atharva Borkar</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNLfeF7p3I0d2R0f1bKpK2msZ8+1PoBzCrGZFRDJ3vuh4wzmx9iy5Z7eIQwQbg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-name">&lt; Atharva Borkar /&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Projects Content -->
+  <section class="projects fade-in" id="projects">
+    <h2>Projects</h2>
+    <div class="project-card-container">
+      <!-- Project Card 1: Bandai Namko -->
+      <div class="project-card" id="cardBandai">
+        <img src="static/bandai-logo.jpg" alt="Bandai Namko Logo" class="project-logo" />
+        <div class="overlay" id="overlayBandai"></div>
+      </div>
+      <!-- Project Card 2: Infosys -->
+      <div class="project-card" id="cardInfosys">
+        <img src="static/infosys-logo.jpg" alt="Infosys Logo" class="project-logo" />
+        <div class="overlay" id="overlayInfosys"></div>
+      </div>
+      <!-- Project Card 3: COX Communication -->
+      <div class="project-card" id="cardCox">
+        <img src="static/cox-logo.jpg" alt="COX Communication Logo" class="project-logo" />
+        <div class="overlay" id="overlayCox"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals for Projects -->
+  <!-- Modal for Bandai Namko -->
+<div id="modalBandai" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModalBandai">&times;</span>
+    <h3>Bandai Namko</h3>
+    <br>
+    <p><strong>Role:</strong> Software Test Engineer</p>
+    <br>
+    <p><strong>Project:</strong> Dragon Ball Z</p>
+    <br>
+    <p>>>Designed and executed comprehensive test cases to validate game functionality, performance, and user experience.</p>
+    <p>>>Tracked and managed the bug life cycle, ensuring timely identification, documentation, and resolution of issues.</p>
+    <p>>>Developed automation scripts to streamline repetitive test scenarios, enhancing efficiency and accuracy.</p>
+    <p>>>Collaborated with developers and QA teams to ensure seamless integration and high-quality software releases.</p>
+    <br>
+    <p><strong>Skills Gained:</strong> Software Test Life Cycle, Software Development Life Cycle, Java Selenium, JUnit, Automation and Manual testing.</p>
+  </div>
+</div>
+
+  <div id="modalInfosys" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModalInfosys">&times;</span>
+      <h3>Infosys</h3>
+      <br>
+      <p><strong>Role:</strong> Systems Engineer</p>
+      <br>
+      <p>>>Developed and optimized automation scripts to streamline processes, reducing manual effort and improving efficiency.</p>
+      <p>>>Worked on software enhancements and bug fixes, ensuring high performance and reliability of applications.</p>
+      <p>>>Collaborated with cross-functional teams to analyze requirements and deliver scalable software solutions.</p>
+      <p>>>Gained hands-on experience with Java, Python, DBMS, and automation tools, contributing to various development and testing tasks.</p>
+      <br>
+      <p><Strong>Skills Gained:</Strong>Java Selenium, Python, Back End Development, Machine Learning, Automation Testing</p>
+    </div>
+  </div>
+  <div id="modalCox" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModalCox">&times;</span>
+      <h3>COX Communication</h3>
+      <br>
+        <p><strong>Role:</strong>Technical Analyst</p>
+      <br>
+       <p>>>Developed a Test Data Management (TDM) tool to automate and streamline the test data generation process.</p>
+        <p>>>Designed and implemented automation scripts, significantly reducing manual effort and improving data accuracy.</p>
+        <p>>>Optimized the test data provisioning workflow, enabling testers to efficiently validate accounts and execute test cases.</p>
+        <p>>>Collaborated with QA teams to ensure seamless integration, enhancing the overall testing and validation process.</p>
+      <br>
+        <p><strong>Skills Gained: </strong> Test Data Management, Automation Scripting, Process Optimization and Workflow Optimization,
+        Agile and Software Testing Practices</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

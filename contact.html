@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Atharva Borkar</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNLfeF7p3I0d2R0f1bKpK2msZ8+1PoBzCrGZFRDJ3vuh4wzmx9iy5Z7eIQwQbg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-name">&lt; Atharva Borkar /&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Contact Section -->
+  <section class="contact fade-in" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+      <!-- Photo on the left -->
+      <div class="contact-right">
+        <img src="static/profile.jpg" alt="Your Photo">
+      </div>
+      <!-- Contact details on the right with typing animation -->
+      <div class="contact-left">
+        <!-- Container for typed paragraphs -->
+        <div id="typing-text"></div>
+
+        <!-- Email & Phone -->
+        <p><strong>Email:</strong> <a href="mailto:atharvaborkar3182@gmail.com">atharvaborkar3182@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+13808673133">+1 380 867 3133</a></p>
+
+        <!-- Social Icons -->
+        <div class="contact-social-icons">
+          <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:yatharvaborkar3182@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+1234567890" aria-label="Phone">
+            <i class="fas fa-phone-alt"></i>
+          </a>
+        </div>
+        <!--Logo to Social Media-->
+        <div class="contact-social-icons">
+          <a href="https://github.com/YOUR_GITHUB" target="_blank" aria-label="GitHub">
+            <img src="static/github-logo.png" alt="GitHub Logo" class="social-logo">
+          </a>
+          <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" aria-label="Instagram">
+            <img src="static/instagram-logo.png" alt="Instagram Logo" class="social-logo">
+          </a>
+          <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" aria-label="LinkedIn">
+            <img src="static/linkedin-logo.png" alt="LinkedIn Logo" class="social-logo">
+          </a>
+        </div>
+        <!-- Resume Button -->
+        <a href="static/resume.pdf" class="resume-button" target="_blank">See My Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typing Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      /* 
+         We'll treat each paragraph as one string to type. 
+         After each paragraph finishes typing, we'll add <br><br> to create a blank line.
+      */
+      const paragraphs = [
+        "I'm available on almost every social media. Feel free to reach out, and I'll respond within 24 hours.",
+        "I specialize in full-stack development, crafting seamless user experiences on the front end and building powerful, scalable back-end systems.",
+        "Whether it's designing dynamic web applications or optimizing performance, I'm here to help."
+      ];
+
+      const target = document.getElementById('typing-text');
+      let paragraphIndex = 0;   // which paragraph we're typing
+      let charIndex = 0;        // which character in the paragraph
+      const typingSpeed = 20;   // ms per character
+      const paragraphPause = 500; // pause before typing the next paragraph (in ms)
+
+      function typeParagraph() {
+        const currentParagraph = paragraphs[paragraphIndex];
+        
+        if (charIndex < currentParagraph.length) {
+          // Type next character
+          target.innerHTML += currentParagraph.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeParagraph, typingSpeed);
+        } else {
+          // Paragraph finished; add a blank line (<br><br>)
+          target.innerHTML += "<br><br>";
+
+          paragraphIndex++;
+          charIndex = 0;
+
+          // If there are more paragraphs to type, wait a bit, then type next
+          if (paragraphIndex < paragraphs.length) {
+            setTimeout(typeParagraph, paragraphPause);
+          }
+        }
+      }
+
+      // Start typing the first paragraph
+      typeParagraph();
+    });
+  </script>
+</body>
+</html>
